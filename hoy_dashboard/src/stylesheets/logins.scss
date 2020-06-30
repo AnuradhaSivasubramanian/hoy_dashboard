@@ -1,0 +1,39 @@
+@import "../stylesheets/global.scss";
+
+.logins--wrapper {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logins--inner_wrapper {
+  width: 100%;
+  height: 80%;
+}
+.logins--title {
+  margin: $margin;
+  color: $dark-grey;
+}
+.logins--displaybox {
+  margin: $margin;
+  height: 60%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $blue-border;
+  border-radius: $border-radius;
+  font-weight: $poppins-bold;
+  font-size: 12em;
+  flex-grow: 4;
+}
+.logins--filter {
+  display: flex;
+  margin: $margin;
+  flex-grow: 2;
+  justify-content: space-between;
+  width: 70%;
+}

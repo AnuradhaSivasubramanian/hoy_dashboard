@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1cbcbca9-d763-470b-9ca8-de13fa9c8266",
+    "firstname": "Odilia",
+    "lastname": "Arnoldussen",
+    "email": "OdiliaArnoldussen@infowijs.nl",
+    "phone": "06-29810577",
+    "type": "student",
+    "created_at": "2019-08-28 09:01:02",
+    "archived_at": null
+  },
+  {
+    "id": "88a09c63-b500-4b2e-8369-882368d2470a",
+    "firstname": "Deon",
+    "lastname": "Rosenboom",
+    "email": "DeonRosenboom@infowijs.nl",
+    "phone": "06-82665430",
+    "type": "student",
+    "created_at": "2019-08-28 09:01:02",
+    "archived_at": null
+  },
+  {
+    "id": "87680d20-709f-4c2c-aade-15430b60a0c3",
+    "firstname": "Mathew",
+    "lastname": "Hussein",
+    "email": "MathewHussein@infowijs.nl",
+    "phone": "06-46703907",
+    "type": "student",
+    "created_at": "2019-08-28 09:01:02",
+    "archived_at": null
+  },
+  {
+    "id": "3343428d-1d46-4442-b00d-3f75b3286a8f",
+    "firstname": "Gijsbert",
+    "lastname": "Smids",
+    "email": "GijsbertSmids@infowijs.nl",
+    "phone": "06-56067448",
+    "type": "student",
+    "created_at": "2019-08-28 09:01:02",
+    "archived_at": null
+  },
+  {
+    "id": "42cb5179-6c1f-4def-a1ef-3416baffa9d5",
+    "firstname": "Manuella",
+    "lastname": "Flier",
+    "email": "ManuellaFlier@infowijs.nl",
+    "phone": "06-93272766",
+    "type": "student",
+    "created_at": "2019-08-28 09:01:02",
+    "archived_at": null
+  },
+  {
+    "id": "0efc0925-cec5-43a5-8396-51a03dc384d5",
+    "firstname": "Irem",
+    "lastname": "Ramp",
+    "email": "IremRamp@infowijs.nl",
+    "phone": "06-53294720",
+    "type": "student",
+    "created_at": "2019-08-28 09:01:02",
+    "archived_at": "2020-01-05 18:33:16"
+  }
+]

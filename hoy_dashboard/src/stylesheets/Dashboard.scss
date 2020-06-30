@@ -1,0 +1,33 @@
+@import "../stylesheets/global.scss";
+
+.dashboard--wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  -moz-box-shadow: inset 0px 2px 30px #60c9cf;
+  -webkit-box-shadow: inset 0px 2px 30px #60c9cf;
+  box-shadow: inset 0px 2px 30px #60c9cf;
+}
+.dashboard--heading {
+  margin: $margin;
+  font-size: $font-size-h1;
+}
+.dashboard--content {
+  margin: $margin;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+}
+.dashboard--footer {
+  background-color: $blue;
+  flex-grow: 1;
+}
+.dashboard--logins {
+  flex-grow: 1;
+  height: 100%;
+}
+.dashboard--notifications {
+  flex-grow: 1;
+  height: 100%;
+}
