@@ -1,13 +1,13 @@
 # Hoy Dashboard
 
-___
+
 
 Hoy Dashboard gives the statistics of Hoy user's app usage. It is built using React (create-react-app), Redux and Scss. The app uses data from Json files.
 
 
 ### Getting Started
 
-___
+
 
 These instructions will get you a copy of the project up and running on your local machine for development.
 
@@ -28,7 +28,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Author
 
-___
+
 
 
 ##### Anuradha Sivasubramanian
