@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import applyUsageFilter from "../helper/applyUsageFilter";
 import "../stylesheets/logins.scss";
 import applyNotificationFilter from "../helper/applyNotificationFilter";
 import calculateBarPercent from "../helper/calculateBarPercent";
+import Details from "./Details";
 import "../stylesheets/Notifications.scss";
 
 const blue = `#60c9cf`;
@@ -19,122 +19,145 @@ export class Notifications extends Component {
           <div className="logins--title">
             Email gestuurd {this.props.notifications} in totaal
           </div>
-          <div className="notifications--displaybox">
-            <div className="notifications--displaybox_sent">
-              <div
-                className="notification--span_sent"
-                style={{
-                  color: `${blue}`,
-                }}
-              >
-                <span> {applyNotificationFilter("sent")} sent</span>
+          {this.props.category === "alles" ? (
+            <div className="notifications--displaybox">
+              <div className="notifications--displaybox_sent">
+                <div
+                  className="notification--span_sent"
+                  style={{
+                    color: `${blue}`,
+                  }}
+                >
+                  <span> {applyNotificationFilter("sent")} sent</span>
+                </div>
+                <div
+                  className="notification--pbar_sent"
+                  style={{
+                    height: `${calculateBarPercent("sent")}%`,
+                    background: `${blue}`,
+                  }}
+                ></div>
               </div>
-              <div
-                className="notification--pbar_sent"
-                style={{
-                  height: `${calculateBarPercent("sent")}%`,
-                  background: `${blue}`,
-                }}
-              ></div>
-            </div>
-            <div className="notifications--displaybox_delivered">
-              <div
-                className="notification--span_delivered"
-                style={{
-                  color: `${purple}`,
-                }}
-              >
-                {" "}
-                <span> {applyNotificationFilter("delivered")} delivered</span>
+              <div className="notifications--displaybox_delivered">
+                <div
+                  className="notification--span_delivered"
+                  style={{
+                    color: `${purple}`,
+                  }}
+                >
+                  <span> {applyNotificationFilter("delivered")} delivered</span>
+                </div>
+
+                <div
+                  className="notification--pbar_delivered"
+                  style={{
+                    height: `${calculateBarPercent("delivered")}%`,
+                    background: `${purple}`,
+                  }}
+                ></div>
               </div>
+              <div className="notifications--displaybox_failed">
+                <div
+                  className="notification--span_failed"
+                  style={{
+                    color: `${red}`,
+                  }}
+                >
+                  <span> {applyNotificationFilter("failed")} failed</span>
+                </div>
 
-              <div
-                className="notification--pbar_delivered"
-                style={{
-                  height: `${calculateBarPercent("delivered")}%`,
-                  background: `${purple}`,
-                }}
-              ></div>
-            </div>
-            <div className="notifications--displaybox_failed">
-              <div
-                className="notification--span_failed"
-                style={{
-                  color: `${red}`,
-                }}
-              >
-                {" "}
-                <span> {applyNotificationFilter("failed")} failed</span>
-              </div>
-
-              <div
-                className="notification--pbar_failed"
-                style={{
-                  height: `${calculateBarPercent("failed")}%`,
-                  background: `${red}`,
-                }}
-              ></div>
-            </div>
-
-            <div className="notifications--displaybox_unknown">
-              <div
-                className="notification--span_unknown"
-                style={{
-                  color: `${dark_grey}`,
-                }}
-              >
-                {" "}
-                <span> {applyNotificationFilter("unknown")} unknown</span>
+                <div
+                  className="notification--pbar_failed"
+                  style={{
+                    height: `${calculateBarPercent("failed")}%`,
+                    background: `${red}`,
+                  }}
+                ></div>
               </div>
 
-              <div
-                className="notification--pbar_unknown"
-                style={{
-                  height: `${calculateBarPercent("unknown")}%`,
-                  background: `${dark_grey}`,
-                }}
-              ></div>
+              <div className="notifications--displaybox_unknown">
+                <div
+                  className="notification--span_unknown"
+                  style={{
+                    color: `${dark_grey}`,
+                  }}
+                >
+                  <span> {applyNotificationFilter("unknown")} unknown</span>
+                </div>
+
+                <div
+                  className="notification--pbar_unknown"
+                  style={{
+                    height: `${calculateBarPercent("unknown")}%`,
+                    background: `${dark_grey}`,
+                  }}
+                ></div>
+              </div>
             </div>
-          </div>
+          ) : (
+            <Details />
+          )}
+
           <div className="logins--filter">
             <button
               className={
-                this.props.category === "month"
-                  ? "btn--primary dark-grey_invert"
-                  : "btn--primary dark-grey"
+                this.props.category === "alles"
+                  ? "btn--secondary dark-grey_invert"
+                  : "btn--secondary dark-grey"
               }
               onClick={() => {
-                this.props.changeFilter(applyUsageFilter("month"));
-                this.props.chooseCategory("month");
+                this.props.chooseCategory("alles");
               }}
             >
-              Maand
+              Alles
             </button>
             <button
               className={
-                this.props.category === "day"
-                  ? "btn--primary dark-grey_invert"
-                  : "btn--primary dark-grey"
+                this.props.category === "sent"
+                  ? "btn--secondary blue_invert"
+                  : "btn--secondary blue"
               }
               onClick={() => {
-                this.props.changeFilter(applyUsageFilter("day"));
-                this.props.chooseCategory("day");
+                this.props.chooseCategory("sent");
               }}
             >
-              Dag
+              Sent
             </button>
             <button
               className={
-                this.props.category === "hour"
-                  ? "btn--primary dark-grey_invert"
-                  : "btn--primary dark-grey"
+                this.props.category === "delivered"
+                  ? "btn--secondary purple_invert"
+                  : "btn--secondary purple"
               }
               onClick={() => {
-                this.props.changeFilter(applyUsageFilter("hour"));
-                this.props.chooseCategory("hour");
+                this.props.chooseCategory("delivered");
               }}
             >
-              Uur
+              Delivered
+            </button>
+            <button
+              className={
+                this.props.category === "failed"
+                  ? "btn--secondary red_invert"
+                  : "btn--secondary red"
+              }
+              onClick={() => {
+                this.props.chooseCategory("failed");
+              }}
+            >
+              Failed
+            </button>
+            <button
+              className={
+                this.props.category === "unknown"
+                  ? "btn--secondary dark-grey_invert"
+                  : "btn--secondary dark-grey"
+              }
+              onClick={() => {
+                this.props.chooseCategory("unknown");
+              }}
+            >
+              Unknown
             </button>
           </div>
         </div>
@@ -145,13 +168,12 @@ export class Notifications extends Component {
 const mapStateToProps = (state) => {
   return {
     notifications: state.notification.total,
+    category: state.notificationSelection.category,
   };
 };
 const mapDispatchToProps = (dispatch) => ({
-  changeFilter: (average) =>
-    dispatch({ type: "CHANGE_FILTER", average: average }),
   chooseCategory: (category) =>
-    dispatch({ type: "CHANGE_CATEGORY", category: category }),
+    dispatch({ type: "CHANGE_NOTIFICATION_CATEGORY", category: category }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Notifications);

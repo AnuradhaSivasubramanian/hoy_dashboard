@@ -30,21 +30,16 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-* {
-  box-sizing: inherit;
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
-}
-
-body {
+body,
+html {
   color: $blue;
   height: 100vh;
+  width: 100vw;
   font-family: $font-poppins;
 }
 #root {
   height: 100vh;
+  width: 100vw;
 }
 /*app wrapper*/
 .app--wrapper {
@@ -55,8 +50,25 @@ body {
   appearance: none;
   background: white;
   width: 150px;
-  height: 50px;
-  font-size: 14px;
+  height: 40px;
+  font-size: 13px;
+  font-family: $font-poppins;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: $border-radius;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn--secondary {
+  appearance: none;
+  background: white;
+  width: 100px;
+  height: 40px;
+  font-size: 13px;
   font-family: $font-poppins;
   cursor: pointer;
   outline: none;
@@ -80,4 +92,28 @@ body {
 .blue {
   color: $blue;
   border: $blue-border;
+  &_invert {
+    background: $blue;
+    color: white;
+    border: white;
+  }
+}
+
+.purple {
+  color: $purple;
+  border: $purple-border;
+  &_invert {
+    background: $purple;
+    color: white;
+    border: white;
+  }
+}
+.red {
+  color: $red;
+  border: $red-border;
+  &_invert {
+    background: $red;
+    color: white;
+    border: white;
+  }
 }

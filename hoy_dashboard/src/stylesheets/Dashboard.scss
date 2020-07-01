@@ -3,15 +3,21 @@
 .dashboard--wrapper {
   display: flex;
   flex-direction: column;
-
   height: 100%;
+  width: 100%;
   -moz-box-shadow: inset 0px 2px 30px #60c9cf;
   -webkit-box-shadow: inset 0px 2px 30px #60c9cf;
   box-shadow: inset 0px 2px 30px #60c9cf;
 }
 .dashboard--heading {
-  margin: $margin;
+  margin: 25px;
   font-size: $font-size-h1;
+}
+@media screen and (max-width: 500px) {
+  .dashboard--heading {
+    margin: $margin;
+    font-size: 1rem;
+  }
 }
 .dashboard--content {
   margin: $margin;
@@ -19,6 +25,13 @@
   flex-direction: row;
   flex-grow: 3;
 }
+@media screen and (max-width: 500px) {
+  .dashboard--content {
+    flex-direction: column;
+    flex-grow: 0;
+  }
+}
+
 .dashboard--footer {
   background-color: $blue;
   flex-grow: 1;

@@ -1,0 +1,24 @@
+@import "../stylesheets/global.scss";
+
+.details--wrapper {
+  margin: $margin;
+  padding: $margin;
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  border: $grey-border;
+  border-radius: $border-radius;
+  justify-content: space-around;
+}
+
+.details--top_text,
+.details--bottom_text {
+  color: $dark_grey;
+  flex-grow: 1;
+}
+.details--middle_text {
+  font-weight: $poppins-bold;
+  font-size: 6em;
+  flex-grow: 2;
+}

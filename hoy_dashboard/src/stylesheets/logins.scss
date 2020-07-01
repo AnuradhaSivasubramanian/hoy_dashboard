@@ -12,6 +12,9 @@
 .logins--inner_wrapper {
   width: 100%;
   height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .logins--title {
   margin: $margin;
@@ -19,16 +22,22 @@
 }
 .logins--displaybox {
   margin: $margin;
-  height: 60%;
+  height: 70%;
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: $blue-border;
+  border: $grey-border;
   border-radius: $border-radius;
   font-weight: $poppins-bold;
   font-size: 12em;
-  flex-grow: 4;
+}
+@media screen and (max-width: 500px) {
+  .logins--displaybox {
+    height: 80%;
+    width: 90%;
+    font-size: 7em;
+  }
 }
 .logins--filter {
   display: flex;
@@ -36,4 +45,10 @@
   flex-grow: 2;
   justify-content: space-between;
   width: 70%;
+}
+@media screen and (max-width: 500px) {
+  .logins--filter {
+    width: 90%;
+    flex-grow: 0;
+  }
 }
