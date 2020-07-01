@@ -1,5 +1,11 @@
 import loginData from "../data/authentication_log.json";
 
+/**
+ * @method  applyUsageFilter - filters user login data based on month, day and hour
+ * @param  {String}  category
+ * @returns {Number} - returns average number of records per month or per day or per hour
+ */
+
 const applyUsageFilter = (category) => {
   let data = [...loginData];
   let strlength = 0;

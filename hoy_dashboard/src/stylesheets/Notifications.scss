@@ -21,12 +21,21 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .notifications--displaybox {
+    height: 80%;
+    width: 95%;
+    font-size: 7em;
+  }
+}
+
 .notification--span {
   &_sent,
   &_delivered,
   &_failed,
   &_unknown {
-    font-size: 10px;
+    color: $dark_grey;
+    font-size: 15px;
     height: 10%;
   }
 }
@@ -36,7 +45,14 @@
   &_delivered,
   &_failed,
   &_unknown {
-    width: 50px;
+    width: 60px;
     border-radius: $border-radius-sm;
+    animation: progressbarfiller 2s reverse;
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes progressbarfiller {
+  to {
+    height: 0;
   }
 }

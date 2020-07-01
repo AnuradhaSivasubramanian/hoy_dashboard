@@ -2,7 +2,6 @@
 
 .details--wrapper {
   margin: $margin;
-  padding: $margin;
   height: 70%;
   width: 70%;
   display: flex;
@@ -12,13 +11,22 @@
   justify-content: space-around;
 }
 
+@media screen and (max-width: 500px) {
+  .details--wrapper {
+    height: 80%;
+    width: 95%;
+  }
+}
+
 .details--top_text,
 .details--bottom_text {
   color: $dark_grey;
   flex-grow: 1;
+  margin: $margin;
 }
 .details--middle_text {
   font-weight: $poppins-bold;
-  font-size: 6em;
+  font-size: 5em;
   flex-grow: 2;
+  margin: $margin;
 }

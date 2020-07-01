@@ -1,5 +1,11 @@
 import notificationData from "../data/notifications.json";
 
+/**
+ * @method  applyNotificationFilter - filters email notifications based on the status - sent, delivered, failed and unknown
+ * @param  {String}  category
+ * @returns {Number} - returns the number of records in that category
+ */
+
 const applyNotificationFilter = (category) => {
   if (!category) {
     return notificationData.filter((item) => item.type === "email").length;

@@ -19,6 +19,8 @@ $purple-border: 0.5px solid $purple;
 $grey-border: 0.5px solid $dark-grey;
 $border-radius: 10px;
 $border-radius-sm: 4px;
+$border: 0.5px solid $dark-grey;
+$box-shadow-grey: 0px 4px 4px $dark-grey;
 
 /* MARGIN */
 $margin: 10px;
@@ -27,20 +29,20 @@ $margin-sm: 5px;
 /* BODY */
 html {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
 }
 
 body,
 html {
   color: $blue;
   height: 100vh;
-  width: 100vw;
+
   font-family: $font-poppins;
 }
+
 #root {
   height: 100vh;
-  width: 100vw;
 }
+
 /*app wrapper*/
 .app--wrapper {
   height: 100vh;
@@ -63,6 +65,23 @@ html {
   transition: all 0.4s ease-in-out;
 }
 
+@media screen and (max-width: 500px) {
+  .btn--primary {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+.btn--primary:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: $box-shadow-grey;
+}
+
 .btn--secondary {
   appearance: none;
   background: white;
@@ -80,6 +99,23 @@ html {
   transition: all 0.4s ease-in-out;
 }
 
+.btn--secondary:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: $box-shadow-grey;
+}
+
+@media screen and (max-width: 500px) {
+  .btn--secondary {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
 .dark-grey {
   color: $dark-grey;
   border: $grey-border;
@@ -89,6 +125,7 @@ html {
     border: white;
   }
 }
+
 .blue {
   color: $blue;
   border: $blue-border;
@@ -108,6 +145,7 @@ html {
     border: white;
   }
 }
+
 .red {
   color: $red;
   border: $red-border;

@@ -1,5 +1,11 @@
 import notificationData from "../data/notifications.json";
 
+/**
+ * @method  calculateDistinctUsers - calculates the number of distinct users with the chosen email notification status
+ * @param  {String}  category
+ * @returns {Number} - returns the number of distinct user ids
+ */
+
 const calculateDistinctUsers = (category) => {
   let data = [];
 

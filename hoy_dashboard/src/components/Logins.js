@@ -1,64 +1,60 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import applyUsageFilter from "../helper/applyUsageFilter";
 import "../stylesheets/logins.scss";
 
-export class Logins extends Component {
-  render() {
-    return (
-      <div className="logins--wrapper">
-        <div className="logins--inner_wrapper">
-          <div className="logins--title">Gemiddeld Logins</div>
-          <div className="logins--displaybox">
-            <span className="logins--displaybox_span">
-              {this.props.averagelogin}
-            </span>
-          </div>
-          <div className="logins--filter">
-            <button
-              className={
-                this.props.category === "month"
-                  ? "btn--primary dark-grey_invert"
-                  : "btn--primary dark-grey"
-              }
-              onClick={() => {
-                this.props.changeFilter(applyUsageFilter("month"));
-                this.props.chooseCategory("month");
-              }}
-            >
-              per Maand
-            </button>
-            <button
-              className={
-                this.props.category === "day"
-                  ? "btn--primary dark-grey_invert"
-                  : "btn--primary dark-grey"
-              }
-              onClick={() => {
-                this.props.changeFilter(applyUsageFilter("day"));
-                this.props.chooseCategory("day");
-              }}
-            >
-              per Dag
-            </button>
-            <button
-              className={
-                this.props.category === "hour"
-                  ? "btn--primary dark-grey_invert"
-                  : "btn--primary dark-grey"
-              }
-              onClick={() => {
-                this.props.changeFilter(applyUsageFilter("hour"));
-                this.props.chooseCategory("hour");
-              }}
-            >
-              per Uur
-            </button>
-          </div>
+export function Logins(props) {
+  return (
+    <div className="logins--wrapper">
+      <div className="logins--inner_wrapper">
+        <div className="logins--title">Gemiddeld Logins</div>
+        <div className="logins--displaybox">
+          <span className="logins--displaybox_span">{props.averagelogin}</span>
+        </div>
+        <div className="logins--filter">
+          <button
+            className={
+              props.category === "month"
+                ? "btn--primary dark-grey_invert"
+                : "btn--primary dark-grey"
+            }
+            onClick={() => {
+              props.changeFilter(applyUsageFilter("month"));
+              props.chooseCategory("month");
+            }}
+          >
+            per Maand
+          </button>
+          <button
+            className={
+              props.category === "day"
+                ? "btn--primary dark-grey_invert"
+                : "btn--primary dark-grey"
+            }
+            onClick={() => {
+              props.changeFilter(applyUsageFilter("day"));
+              props.chooseCategory("day");
+            }}
+          >
+            per Dag
+          </button>
+          <button
+            className={
+              props.category === "hour"
+                ? "btn--primary dark-grey_invert"
+                : "btn--primary dark-grey"
+            }
+            onClick={() => {
+              props.changeFilter(applyUsageFilter("hour"));
+              props.chooseCategory("hour");
+            }}
+          >
+            per Uur
+          </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 const mapStateToProps = (state) => {
@@ -67,6 +63,7 @@ const mapStateToProps = (state) => {
     category: state.usage.category,
   };
 };
+
 const mapDispatchToProps = (dispatch) => ({
   changeFilter: (average) =>
     dispatch({ type: "CHANGE_FILTER", average: average }),

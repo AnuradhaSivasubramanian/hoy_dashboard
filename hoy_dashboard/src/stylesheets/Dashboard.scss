@@ -3,32 +3,56 @@
 .dashboard--wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   -moz-box-shadow: inset 0px 2px 30px #60c9cf;
   -webkit-box-shadow: inset 0px 2px 30px #60c9cf;
   box-shadow: inset 0px 2px 30px #60c9cf;
 }
+
 .dashboard--heading {
   margin: 25px;
   font-size: $font-size-h1;
 }
+
 @media screen and (max-width: 500px) {
+  .dashboard--wrapper {
+    height: 150vh;
+  }
   .dashboard--heading {
     margin: $margin;
     font-size: 1rem;
   }
 }
+
+@media screen and (min-width: 501px) and (max-width: 780px) {
+  .dashboard--wrapper {
+    height: 150vh;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-height: 500px) {
+  .dashboard--wrapper {
+    height: 250vh;
+  }
+}
+
 .dashboard--content {
   margin: $margin;
   display: flex;
   flex-direction: row;
   flex-grow: 3;
 }
+
 @media screen and (max-width: 500px) {
   .dashboard--content {
     flex-direction: column;
-    flex-grow: 0;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 780px) {
+  .dashboard--content {
+    flex-direction: column;
   }
 }
 
@@ -36,10 +60,12 @@
   background-color: $blue;
   flex-grow: 1;
 }
+
 .dashboard--logins {
   flex-grow: 1;
   height: 100%;
 }
+
 .dashboard--notifications {
   flex-grow: 1;
   height: 100%;
