@@ -21,7 +21,7 @@ export function Notifications(props) {
           <div className="notifications--displaybox">
             <div className="notifications--displaybox_sent">
               <div className="notification--span_sent">
-                <span>sent</span>
+                <span>Sent</span>
               </div>
               <div
                 className="notification--pbar_sent"
@@ -36,7 +36,7 @@ export function Notifications(props) {
             </div>
             <div className="notifications--displaybox_delivered">
               <div className="notification--span_delivered">
-                <span> delivered</span>
+                <span> Delivered</span>
               </div>
 
               <div
@@ -52,7 +52,7 @@ export function Notifications(props) {
             </div>
             <div className="notifications--displaybox_failed">
               <div className="notification--span_failed">
-                <span> failed</span>
+                <span> Failed</span>
               </div>
 
               <div
@@ -69,7 +69,7 @@ export function Notifications(props) {
 
             <div className="notifications--displaybox_unknown">
               <div className="notification--span_unknown">
-                <span> unknown</span>
+                <span> Unknown</span>
               </div>
 
               <div
