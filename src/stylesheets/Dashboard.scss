@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 780px) {
+@media screen and (min-width: 501px) and (max-width: 1099px) {
   .dashboard--wrapper {
     height: 150vh;
   }
@@ -44,13 +44,7 @@
   flex-grow: 3;
 }
 
-@media screen and (max-width: 500px) {
-  .dashboard--content {
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 501px) and (max-width: 780px) {
+@media screen and (max-width: 1099px) {
   .dashboard--content {
     flex-direction: column;
   }

@@ -21,7 +21,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .notifications--displaybox {
     height: 80%;
     width: 95%;
@@ -29,6 +29,13 @@
   }
 }
 
+//laptop to keep button spacing
+@media screen and (min-width: 1100px) and (max-width: 1450px) {
+  .notifications--displaybox {
+    width: 90%;
+    font-size: 7em;
+  }
+}
 .notification--span {
   &_sent,
   &_delivered,
@@ -37,6 +44,17 @@
     color: $dark_grey;
     font-size: 15px;
     height: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .notification--span {
+    &_sent,
+    &_delivered,
+    &_failed,
+    &_unknown {
+      font-size: 12px;
+    }
   }
 }
 

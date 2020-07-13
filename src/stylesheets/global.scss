@@ -19,7 +19,6 @@ $purple-border: 0.5px solid $purple;
 $grey-border: 0.5px solid $dark-grey;
 $border-radius: 10px;
 $border-radius-sm: 4px;
-$border: 0.5px solid $dark-grey;
 $box-shadow-grey: 0px 4px 4px $dark-grey;
 
 /* MARGIN */
@@ -35,7 +34,6 @@ body,
 html {
   color: $blue;
   height: 100vh;
-
   font-family: $font-poppins;
 }
 
@@ -74,7 +72,6 @@ html {
 }
 
 .btn--primary:hover {
-  background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -100,7 +97,6 @@ html {
 }
 
 .btn--secondary:hover {
-  background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
